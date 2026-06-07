@@ -1,0 +1,17 @@
+{
+  "name": "swap-ai-plugin-public",
+  "owner": {
+    "name": "swapcommerce"
+  },
+  "metadata": {
+    "description": "Swap Commerce AI plugin APIs",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "swap-api-documentation",
+      "source": "./swap-api-documentation",
+      "description": "Call and integrate any Swap Commerce API from your AI tool"
+    }
+  ]
+}

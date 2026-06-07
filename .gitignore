@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Orphaned markers
+.orphaned_at
+
+# Local API config — keep in home dir (~/.swap-api.json), not in the repo
+.swap-api.json
+.env
+.env.local
+*.secret
+*.keys
