@@ -53,7 +53,7 @@ Either `orderId` or `orderName` is required, with `orderId` taking priority. |
 | `city` | string | Yes |  |
 | `county` | string | No |  |
 | `postcode` | string | No | The postcode is required for most countries, but optional for a few. |
-| `country` | enum: YE, M2, IM... | Yes |  |
+| `country` | enum: AF, AL, DZ... | Yes |  |
 | `taxId` | string | No |  |
 | `eoriId` | string | No |  |
 | `ukimsNumber` | string | No |  |
@@ -73,7 +73,7 @@ Either `orderId` or `orderName` is required, with `orderId` taking priority. |
 | `city` | string | Yes |  |
 | `county` | string | No |  |
 | `postcode` | string | No | The postcode is required for most countries, but optional for a few. |
-| `country` | enum: YE, M2, IM... | Yes |  |
+| `country` | enum: AF, AL, DZ... | Yes |  |
 | `taxId` | string | No |  |
 | `eoriId` | string | No |  |
 | `ukimsNumber` | string | No |  |

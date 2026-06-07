@@ -2,8 +2,6 @@
 
 Call any Swap Commerce API directly from your AI coding environment using [Claude Code](https://claude.ai/code).
 
-Full API reference: [docs.api-swap-os.com](https://docs.api-swap-os.com/)
-
 <br/>
 
 ## Supported APIs
@@ -47,9 +45,9 @@ Enter your API keys when prompted. You can type them directly or reference envir
 
 After setup, just describe what you want in Claude Code:
 
-> "Get all returns for store X using sandbox"
-> "Calculate duties for this shipment via TLC prod"
-> "List open protection claims for the last 7 days"
+- "Get all returns for store X using sandbox"
+- "Calculate duties for this shipment via TLC prod"
+- "List open protection claims for the last 7 days"
 
 Each `/swap-*` command guides you through auth, operation discovery, and execution automatically.
 
