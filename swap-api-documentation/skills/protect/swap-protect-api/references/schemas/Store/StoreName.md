@@ -1,0 +1,4 @@
+# StoreName
+
+**Type:** primitive
+
