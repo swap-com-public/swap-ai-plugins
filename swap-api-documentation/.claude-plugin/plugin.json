@@ -1,7 +1,7 @@
 {
   "name": "swap-api-documentation",
   "description": "Call and integrate any Swap Commerce API from your AI tool",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "author": {
     "name": "swapcommerce"
   }
