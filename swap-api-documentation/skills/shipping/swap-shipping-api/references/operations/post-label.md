@@ -4,7 +4,9 @@
 **Create a shipping label**
 **Operation ID:** `post--label`
 
-Create a shipping label for a order.
+Create a shipping label for an order.
+
+If we can match the order in our system, we'll fill in each item's customs details — the HS code, value, and description — from the order we have on file, so they're as accurate as possible. If we can't find a matching order, we'll use the values you send in the request instead.
 
 ## Parameters
 
@@ -30,14 +32,15 @@ Create a shipping label for a order.
 | `reference` | string | No | An optional reference for your internal tracking (e.g., your own ID). |
 | `collectionDate` | string (date) | Yes | The date the shipment is expected to be collected, must either today or in the future. |
 | `deliveryInstructions` | string | No |  |
+| `metadata` | object | No | Optional set of key-value pairs (both keys and values must be strings) for your own use, e.g. internal identifiers. The combined size of all keys and values must not exceed 500 bytes. It is persisted against the label and returned in the response. |
 | `shipFrom` | object | Yes |  |
 | `shipTo` | object | Yes |  |
+| `parcels` | object[] | Yes | List of parcels to be shipped |
 | `orderId` | string | No | The ID of the order from the e-commerce platform e.g. Shopify order ID.
 Either `orderId` or `orderName` is required, with `orderId` taking priority. |
 | `orderName` | string | No | The name of the order from the e-commerce platform e.g. Shopify order name.
 Either `orderId` or `orderName` is required, with `orderId` taking priority. |
 | `storeId` | string | Yes |  |
-| `parcels` | object[] | Yes | List of parcels to be shipped |
 
 **`shipFrom` fields:**
 
@@ -111,6 +114,7 @@ Either `orderId` or `orderName` is required, with `orderId` taking priority. |
 | `commercialInvoiceUrl` | string | No | The commercial invoice URL provided by the Swap |
 | `courier` | string | Yes | The courier used to create the label |
 | `reference` | string | No | The reference provided by the user |
+| `metadata` | object | No | The metadata key-value pairs provided when the label was created. |
 
 **`tracking` fields:**
 
