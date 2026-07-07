@@ -82,6 +82,8 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `sku` | string,null | No |  |
 | `variantId` | string,null | No |  |
 | `productPrice` | number | Yes | Price of just the product alone, NOT including VAT and Duties or the quantity |
+| `manufacturePrice` | number | No | Manufacture price of the product before discounts, VAT, Duties, or quantity |
+| `preDiscountedPrice` | number | No | Unit price of the product before discounts, VAT, Duties, or quantity |
 | `productVat` | number | Yes | cost of VAT for the product, quantity NOT taken into account |
 | `productDuties` | number | Yes | cost of Duties for the product, quantity NOT taken into account |
 | `linePrice` | number | Yes | Price of the product and quantity. does NOT including VAT and Duties |
