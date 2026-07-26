@@ -38,7 +38,6 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes |  |
-| `variantId` | string | Yes | The unique identifier for the variant in the user's system/platform |
 | `productId` | string | Yes | The unique identifier for the product in the user's system/platform |
 | `lineItemId` | string | No | The unique identifier for the line item in the user's system/platform. If not provided, a random UUID will be generated |
 | `productName` | string | Yes | The name of the product in the user's system/platform |
@@ -46,7 +45,7 @@
 | `variantTitle` | string | Yes | The title of the variant in the user's system/platform |
 | `weightGrams` | integer | Yes | The weight of the line item in grams |
 | `sku` | string | No |  |
-| `price` | number | Yes | The pre-discount pre-tax-duty price of a single item |
+| `price` | number | No | The pre-discount pre-tax-duty price of a single item |
 | `discountedPrice` | number | No | The post-discount pre-tax-duty price of a single item |
 | `unitPrice` | number | No | The manufacture cost of a single item |
 | `quantity` | integer | Yes |  |

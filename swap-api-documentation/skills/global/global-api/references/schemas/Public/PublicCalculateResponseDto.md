@@ -45,6 +45,8 @@
 | `hsCode` | string | Yes |  |
 | `countryCodeOfOrigin` | string | Yes |  |
 | `isTaxable` | boolean | Yes |  |
+| `includedTaxes` | boolean | Yes |  |
+| `includedDuties` | boolean | Yes |  |
 | `taxesDutiesBreakdown` | object | Yes |  |
 
 #### `items.taxesDutiesBreakdown`
@@ -54,6 +56,10 @@
 | `totalTaxesCalculated` | number | Yes |  |
 | `totalDutiesCalculated` | number | Yes |  |
 | `totalTaxesDutiesCalculated` | number | Yes |  |
+| `totalTaxesIncludedInPrice` | number | Yes |  |
+| `totalDutiesIncludedInPrice` | number | Yes |  |
+| `totalTaxesExclusiveOfPrice` | number | Yes |  |
+| `totalDutiesExclusiveOfPrice` | number | Yes |  |
 
 ### `shipping`
 
@@ -71,6 +77,10 @@
 | `totalTaxesCalculated` | number | Yes |  |
 | `totalDutiesCalculated` | number | Yes |  |
 | `totalTaxesDutiesCalculated` | number | Yes |  |
+| `totalTaxesIncludedInPrice` | number | Yes |  |
+| `totalDutiesIncludedInPrice` | number | Yes |  |
+| `totalTaxesExclusiveOfPrice` | number | Yes |  |
+| `totalDutiesExclusiveOfPrice` | number | Yes |  |
 
 ### `totals`
 

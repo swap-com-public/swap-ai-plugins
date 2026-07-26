@@ -9,6 +9,7 @@
 | `id` | string | Yes | ID of the request for tracking purposes |
 | `carrierName` | string | Yes | The name of the carrier |
 | `serviceCode` | string | Yes | The service code of the carrier |
+| `saleType` | enum: B2B, B2C | Yes | The type of the sale used for the calculation |
 | `totalAmount` | number | Yes | The total amount of the order |
 | `totalTax` | number | Yes | The total tax of the order |
 | `totalDuty` | number | Yes | The total duty of the order |

@@ -71,6 +71,7 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `importer` | object,null | No | Only present in B2B2C mode |
 | `consignee` | object,null | No | Only present in B2B2C mode |
 | `shippingCost` | number,null | No | Shipping cost |
+| `taxIdentifier` | object,null | No |  |
 | `itemList` | object[] | Yes |  |
 | `customFields` | object,null | No |  |
 
@@ -94,4 +95,5 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `hsCode` | string,null | No | HS Code for this item |
 | `manufacturerIdentificationCode` | string,null | No | Manufacturer Identification Code for this item |
 | `customsDescription` | string,null | No | Description used at customs to identify the contents of the package |
+| `complianceDocuments` | object | No | Compliance documents keyed by document type code as base64 strings. |
 
