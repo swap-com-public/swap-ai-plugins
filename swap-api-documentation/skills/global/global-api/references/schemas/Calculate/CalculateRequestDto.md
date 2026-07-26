@@ -38,8 +38,11 @@
 |-------|------|----------|-------------|
 | `id` | string | Yes |  |
 | `quantity` | integer | Yes |  |
-| `taxableItemPrice` | number | Yes |  |
+| `taxableItemPrice` | number | No |  |
 | `taxableUnitPrice` | number | No |  |
+| `itemPrice` | number | No |  |
+| `discountedItemPrice` | number | No |  |
+| `manufactureCost` | number | No |  |
 | `classificationInfo` | object | Yes |  |
 
 #### `items.classificationInfo`

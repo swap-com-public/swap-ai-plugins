@@ -29,6 +29,15 @@ For example, if your store is based in the UK, send amounts in **GBP**.
 
 **Call it when:** A customer reaches checkout and you need to display tax and duty amounts before payment — including after the shopper selects or changes a shipping option.
 
+**Pricing-zone strategy flags.** Each returned item carries two independent booleans describing how the item was priced: `includedTaxes` (VAT is baked into the product price) and `includedDuties` (duties are baked in). Together they encode the four pricing strategies:
+
+| `includedTaxes` | `includedDuties` | Strategy |
+| --- | --- | --- |
+| false | false | Tax-exclusive (Checkout) |
+| true | false | VAT-inclusive |
+| false | true | Duties-inclusive |
+| true | true | Taxes-and-duties-inclusive |
+
 ## Request Body
 
 **Required:** Yes

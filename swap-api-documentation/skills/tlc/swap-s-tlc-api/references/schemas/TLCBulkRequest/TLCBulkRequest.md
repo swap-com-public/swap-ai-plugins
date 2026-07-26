@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `storeName` | string | Yes | The name of the store |
+| `saleType` | enum: B2B, B2C | No | The type of the sale. Optional, defaults to B2C. |
 | `addresses` | any | Yes | The addresses of the store |
 | `taxIdentifiers` | TLCTaxIdentifier[] | No |  |
 | `shippingRates` | TLCShippingRate[] | Yes | List of shipping rates |
