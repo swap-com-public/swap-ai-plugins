@@ -2,7 +2,7 @@
 name: swap-shipping-api
 description: API documentation for Swap Shipping. Use when working with the Swap Shipping API or when the user needs to interact with this API.
 metadata:
-  api-version: "1.0.136"
+  api-version: "1.0.147"
   openapi-version: "3.1.0"
 ---
 

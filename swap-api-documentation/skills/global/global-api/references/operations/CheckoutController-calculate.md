@@ -50,7 +50,7 @@ For example, if your store is based in the UK, send amounts in **GBP**.
 
 | Status | Description |
 |--------|-------------|
-| 200 | Tax calculation result |
+| 201 | Tax calculation result |
 | 400 | Request body validation errors (`message`: `Validation failed` with field-level `errors`), or invalid HS codes (`message` lists affected item ids and references `/checkout/classify`; no `calculationId` is returned) |
 | 401 | Missing or invalid API key |
 | 500 | Internal server error |
@@ -63,4 +63,4 @@ For example, if your store is based in the UK, send amounts in **GBP**.
 
 ## Security
 
-- **x-api-key**
+- **X-Api-Key**

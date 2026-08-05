@@ -51,4 +51,4 @@ Once an order has been created for a given `(storeId, platformOrderId)` pair, la
 
 ## Security
 
-- **x-api-key**
+- **X-Api-Key**

@@ -47,4 +47,4 @@ Once the shopper selects a rate — or changes their selection — call `/checko
 
 ## Security
 
-- **x-api-key**
+- **X-Api-Key**
