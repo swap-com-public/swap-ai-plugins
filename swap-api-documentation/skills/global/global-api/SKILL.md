@@ -18,8 +18,8 @@ This API documentation is split into multiple files for on-demand loading.
 ```
 references/
 ├── resources/      # 1 resource index files
-├── operations/     # 4 operation detail files
-└── schemas/        # 5 schema groups, 9 schema files
+├── operations/     # 5 operation detail files
+└── schemas/        # 6 schema groups, 10 schema files
 ```
 
 **Navigation flow:**
@@ -39,4 +39,4 @@ Supported methods: **x-api-key**. See `references/authentication.md` for details
 
 ## Resources
 
-- **Public** → `references/resources/Public.md` (4 ops)
+- **Public** → `references/resources/Public.md` (5 ops)

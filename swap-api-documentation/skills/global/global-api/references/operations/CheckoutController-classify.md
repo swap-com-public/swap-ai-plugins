@@ -49,4 +49,4 @@ If two items have the same `id`, but other values differ, a validation error wil
 
 ## Security
 
-- **x-api-key**
+- **X-Api-Key**
