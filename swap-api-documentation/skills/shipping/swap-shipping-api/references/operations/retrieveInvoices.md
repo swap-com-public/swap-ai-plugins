@@ -61,6 +61,7 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `orderName` | string,null | No |  |
 | `storeId` | string | Yes |  |
 | `shippingReferenceId` | string,null | No | Swap's internal shipping reference ID |
+| `aesProofOfFilingCitation` | string,null | No | AES citation for the commercial invoice: the NOEEI exemption legend when EEI filing is not required, or the ITN once a required filing is accepted. Null when no determination applies. |
 | `totalPaid` | number | Yes | Total paid including VAT and Duties |
 | `totalVatPaid` | number | Yes |  |
 | `totalDutiesPaid` | number | Yes |  |
@@ -72,6 +73,8 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `consignee` | object,null | No | Only present in B2B2C mode |
 | `shippingCost` | number,null | No | Shipping cost |
 | `taxIdentifier` | object,null | No |  |
+| `shippingRateAmount` | number,null | No | Shipping rate amount |
+| `shippingTaxLines` | array,null | No | Itemised tax breakdown for shipping |
 | `itemList` | object[] | Yes |  |
 | `customFields` | object,null | No |  |
 
@@ -96,4 +99,5 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `manufacturerIdentificationCode` | string,null | No | Manufacturer Identification Code for this item |
 | `customsDescription` | string,null | No | Description used at customs to identify the contents of the package |
 | `complianceDocuments` | object | No | Compliance documents keyed by document type code as base64 strings. |
+| `taxLines` | array,null | No | Itemised tax breakdown |
 

@@ -12,7 +12,11 @@ Pass `shippingValue` when you want taxes and duties calculated on shipping. Supp
 
 This is the **calculate** step in the Swap Global checkout flow: **[Classify](/products/global/global-reference/checkout-controller-classify/) → [optional Shipping rates](/products/global/global-reference/shipping-public-controller-calculate-rates/) → Calculate → [Complete](/products/global/global-reference/orders-controller-create/)**. See the [Checkout Flow](/products/global/checkout-flow) guide for the conceptual walkthrough.
 
-**Each item must include an `hsCode`.** To obtain HS codes for your products, call [`/checkout/classify`](/products/global/global-reference/checkout-controller-classify/) first.
+**Every taxable item must include an `hsCode`.** To obtain HS codes for your products, call [`/checkout/classify`](/products/global/global-reference/checkout-controller-classify/) first.
+
+:::info Non-taxable items
+Set `isTaxable: false` on items that should not be taxed at all — gift cards, digital goods, and similar. Do **not** send a zero price to achieve this: send the real price with `isTaxable: false`. Non-taxable items may omit `classificationInfo` entirely (both `hsCode` and `countryCodeOfOrigin`), are returned with a zero tax and duty breakdown, and still count towards the transaction `subtotal` and `total`. `isTaxable` defaults to `true` when omitted.
+:::
 
 :::danger Invalid HS codes
 If an item's `hsCode` is invalid and cannot be resolved at calculate time, the endpoint returns **400** with a `message` (not a partial tax breakdown). The message lists the affected item `id` values and directs you to call [`/checkout/classify`](/products/global/global-reference/checkout-controller-classify/) to obtain valid HS codes, then retry `/checkout/calculate` with the updated values. No `calculationId` is created for these requests.
@@ -22,9 +26,15 @@ If an item's `hsCode` is invalid and cannot be resolved at calculate time, the e
 The `id` you send for each item must match the one used in `/checkout/classify`, `/shipping/rates`, `/checkout/calculate`, and `/orders`. If you use Shopify as your inventory source of truth, use the **`variant_id`** as the item id.
 :::
 
+:::warning Item IDs must be unique
+Unlike [`/checkout/classify`](/products/global/global-reference/checkout-controller-classify/), which accepts duplicate items when all their fields are identical, every `id` in the `items` array here must be **unique** — a duplicate returns **400**. Send one entry per item and use `quantity` to express how many were bought; the `calculationId` this call returns is later matched to your order by item id.
+:::
+
 :::warning Currency Requirements
 All **monetary values** sent (prices, fees, shipping, and similar fields) must use your **store's base currency**<br/>
 For example, if your store is based in the UK, send amounts in **GBP**.
+
+The `currency` you send here governs the whole chain: the calculation is returned in it, and the order created from this calculation via [`/orders`](/products/global/global-reference/orders-controller-create/) is recorded in it. `/orders` does not take a `currency` of its own.
 :::
 
 **Call it when:** A customer reaches checkout and you need to display tax and duty amounts before payment — including after the shopper selects or changes a shipping option.

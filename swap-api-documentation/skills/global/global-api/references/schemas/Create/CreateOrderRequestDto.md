@@ -18,7 +18,6 @@
 | `platformOrderId` | string | Yes | The unique identifier for the order in the user's system/platform |
 | `platformOrderName` | string | No | The display name of the order in the user's system/platform (i.e #US123) |
 | `placedAt` | string (date-time) | Yes | The date and time the order was created in the user's system/platform |
-| `currency` | string | Yes | The currency of all price values |
 | `totalAmount` | number | Yes | The total amount charged to the customer for the order (including taxes, duties, discounts, and shipping) |
 | `shipping` | object | Yes |  |
 | `email` | string (email) | No | The email address of the customer |
@@ -31,7 +30,7 @@
 |-------|------|----------|-------------|
 | `rateName` | string | No | The name of the shipping rate (i.e Standard Shipping) |
 | `rateCode` | string | No | A unique rate code to be used by 3PL systems to match the shipping rate. |
-| `rateAmount` | number | Yes | The amount charged for the shipping rate |
+| `rateAmount` | number | Yes | The amount charged for the shipping rate. This is the shipping amount recorded on the order. It should match the shippingValue sent to /checkout/calculate, which is the amount shipping taxes and duties were calculated over |
 
 #### `order.lineItems`
 
@@ -41,14 +40,11 @@
 | `productId` | string | Yes | The unique identifier for the product in the user's system/platform |
 | `lineItemId` | string | No | The unique identifier for the line item in the user's system/platform. If not provided, a random UUID will be generated |
 | `productName` | string | Yes | The name of the product in the user's system/platform |
-| `productTitle` | string | Yes | The title of the product in the user's system/platform |
-| `variantTitle` | string | Yes | The title of the variant in the user's system/platform |
-| `weightGrams` | integer | Yes | The weight of the line item in grams |
+| `productTitle` | string | No | The title of the product in the user's system/platform. Defaults to productName when omitted |
+| `variantTitle` | string | No | The title of the variant in the user's system/platform. May be null or empty for products without variants; persisted as an empty string |
+| `weightGrams` | integer | Yes | The weight of the line item in grams. 0 is valid for digital or otherwise zero-weight items |
 | `sku` | string | No |  |
-| `price` | number | No | The pre-discount pre-tax-duty price of a single item |
-| `discountedPrice` | number | No | The post-discount pre-tax-duty price of a single item |
-| `unitPrice` | number | No | The manufacture cost of a single item |
-| `quantity` | integer | Yes |  |
+| `barcode` | string | No |  |
 | `shippable` | boolean | Yes | Whether the line item is shippable (i.e False if digital) |
 
 #### `order.destinationAddress`
