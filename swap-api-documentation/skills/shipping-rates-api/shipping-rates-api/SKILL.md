@@ -1,14 +1,14 @@
 ---
-name: global-api
-description: Global API documentation. Use when working with the Global API or when the user needs to interact with this API.
+name: shipping-rates-api
+description: Partner-scoped shipping rates API. Use when working with the Shipping Rates API or when the user needs to interact with this API.
 metadata:
   api-version: "1.0.0"
   openapi-version: "3.0.0"
 ---
 
-# Global API
+# Shipping Rates API
 
-Global API documentation
+Partner-scoped shipping rates API
 
 ## How to Use This Skill
 
@@ -18,8 +18,8 @@ This API documentation is split into multiple files for on-demand loading.
 ```
 references/
 ├── resources/      # 1 resource index files
-├── operations/     # 7 operation detail files
-└── schemas/        # 8 schema groups, 12 schema files
+├── operations/     # 2 operation detail files
+└── schemas/        # 3 schema groups, 4 schema files
 ```
 
 **Navigation flow:**
@@ -35,8 +35,8 @@ references/
 
 ## Authentication
 
-Supported methods: **x-api-key**. See `references/authentication.md` for details.
+Supported methods: **X-Api-Key**. See `references/authentication.md` for details.
 
 ## Resources
 
-- **Public** → `references/resources/Public.md` (7 ops)
+- **Shipping Rates** → `references/resources/Shipping-Rates.md` (2 ops)
