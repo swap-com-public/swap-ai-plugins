@@ -41,8 +41,8 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `orderStatus` | string[] | Yes |  |
-| `paymentStatus` | enum: Pending, Authorized, Partially Paid... | Yes |  |
-| `fulfillmentStatus` | enum: Fulfilled, Partially Fulfilled, Restocked... | Yes |  |
+| `paymentStatus` | enum: Pending, Authorized, Partially Paid, Paid, Refunded, Partially Refunded, Voided, Expired, Unknown | Yes |  |
+| `fulfillmentStatus` | enum: Fulfilled, Partially Fulfilled, Restocked, Unfulfilled | Yes |  |
 | `shippingStatuses` | object[] | Yes |  |
-| `orderDisplayStatus` | enum: Order placed, Shipped, Cancelled... | Yes |  |
+| `orderDisplayStatus` | enum: Order placed, Shipped, Delivered, Issue, Cancelled, Returned, Partially returned | Yes |  |
 

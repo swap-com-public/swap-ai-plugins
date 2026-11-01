@@ -29,7 +29,9 @@ Get invoices
 
 The filters are all optional, and hence if none are provided then this will be ignored.
 
-If multiple filters are provided then the filter priority is: `variantId` > `sku` > `productTitle` > `variantTitle`. |
+If multiple filters are provided then the filter priority is: `variantId` > `sku` > `productTitle` > `variantTitle`.
+
+If none of the fields above match an item, the order items' barcodes are checked instead, using `barcode`, or `sku` if no `barcode` was sent. |
 | `storeId` | string | Yes |  |
 
 **`items` fields:**
@@ -39,6 +41,7 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `id` | string,null | No | An optional identifier that will be included in the response for you to match within your own system. |
 | `variantId` | string,null | No |  |
 | `sku` | string,null | No |  |
+| `barcode` | string,null | No |  |
 | `productTitle` | string,null | No |  |
 | `variantTitle` | string,null | No |  |
 
@@ -84,6 +87,7 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 |-------|------|----------|-------------|
 | `id` | string,null | No | Your provided ID |
 | `sku` | string,null | No |  |
+| `barcode` | string | No |  |
 | `variantId` | string,null | No |  |
 | `productPrice` | number | Yes | Price of just the product alone, NOT including VAT and Duties or the quantity |
 | `manufacturePrice` | number | No | Manufacture price of the product before discounts, VAT, Duties, or quantity |
@@ -98,6 +102,10 @@ If multiple filters are provided then the filter priority is: `variantId` > `sku
 | `hsCode` | string,null | No | HS Code for this item |
 | `manufacturerIdentificationCode` | string,null | No | Manufacturer Identification Code for this item |
 | `customsDescription` | string,null | No | Description used at customs to identify the contents of the package |
+| `merchantProductId` | string,null | No | Merchant product identifier (Shopify SKU) from Compliance Hub. SKU on the order remains the fallback. |
+| `nonStandardProductId` | string,null | No | Manufacturer's own product code from Compliance Hub. For EU destinations with no manufacturer code, this is the standard product identifier (barcode / GTIN) from Compliance Hub, as EU customs guidance allows. Empty when neither is set. |
+| `standardProductId` | string,null | No | Standard product identifier (barcode / GTIN) from Compliance Hub. For EU destinations with no standard product identifier in Compliance Hub, this is the order line barcode, or "NO" when there is no barcode either, as FedEx requires on the commercial invoice. |
+| `cpscEfiling` | object,null | No | CPSC eFiling values for this line. A line is either disclaimed (disclaimCode, intendedUseCode, intendedUseDescription) or references a registered certificate (certifierId, registryProductId, productVersion), never both; the other trio is null. All six null means there is nothing to file. |
 | `complianceDocuments` | object | No | Compliance documents keyed by document type code as base64 strings. |
 | `taxLines` | array,null | No | Itemised tax breakdown |
 

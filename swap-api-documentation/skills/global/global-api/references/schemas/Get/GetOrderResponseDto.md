@@ -78,7 +78,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `buffersSettings` | object | Yes | The merchant-set buffers that were applied to the order. |
-| `taxStrategy` | enum: Checkout, VAT-Inclusive, TLC-Inclusive... | Yes | The tax strategy that was applied to the order. |
+| `taxStrategy` | enum: Checkout, VAT-Inclusive, TLC-Inclusive, Duties-Inclusive, Unknown | Yes | The tax strategy that was applied to the order. |
 | `pricesIncludeStrategy` | boolean | Yes | If true, the storefront prices were assumed to include the set Tax Strategy and were not adjusted by Swap. |
 | `dynamicPricingSettings` | object | Yes |  |
 | `fixedPricingSettings` | object | Yes |  |
@@ -124,7 +124,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `shippingStatuses` | object[] | Yes |  |
-| `orderDisplayStatus` | enum: Order placed, Shipped, Cancelled... | Yes |  |
+| `orderDisplayStatus` | enum: Order placed, Shipped, Delivered, Issue, Cancelled, Returned, Partially returned | Yes |  |
 
 #### `order.checkoutFulfillments`
 

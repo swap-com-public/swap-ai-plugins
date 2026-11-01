@@ -8,7 +8,7 @@
 |-------|------|----------|-------------|
 | `orderId` | string | Yes | The ID of the order |
 | `orderNumber` | string | Yes | The number of the order |
-| `status` | enum: pending, paid, fulfilled... | Yes | The status of the order |
+| `status` | enum: pending, paid, fulfilled, partially_fulfilled, delivered, cancelled, refunded, partially_refunded | Yes | The status of the order |
 | `lineItems` | LineItemDto[] | Yes | The product line items of the order |
 | `totals` | any | Yes | The totals of the order |
 | `billingAddress` | any | No | The billing address of the order |

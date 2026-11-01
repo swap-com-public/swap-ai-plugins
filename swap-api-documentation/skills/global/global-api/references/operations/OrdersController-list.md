@@ -25,7 +25,7 @@ All filters are optional and combine as an AND:
 
 - `name` — store order name (for example `#US-123`)
 - `destinationCountries` — ISO 3166-1 alpha-2 codes as a comma-separated list (`?destinationCountries=US,CA`)
-- `status` — **display** status, not the internal order status. Allowed values: `Order placed`, `Shipped`, `Cancelled`, `Returned`, `Partially returned`
+- `status` — **display** status, not the internal order status. Allowed values: `Order placed`, `Shipped`, `Delivered`, `Issue`, `Cancelled`, `Returned`, `Partially returned`
 - `startDate` / `endDate` — inclusive `orderPlacedAt` range as ISO date or datetime. Requests with `startDate` later than `endDate` are rejected.
 :::
 
@@ -35,7 +35,7 @@ All filters are optional and combine as an AND:
 |------|------|------|----------|-------------|
 | `name` | query | string | No | Filter by store order name (i.e #US-123) |
 | `destinationCountries` | query | any | Yes | ISO 3166-1 alpha-2 destination country codes as a comma-separated list. |
-| `status` | query | enum: Order placed, Shipped, Cancelled... | No | Status filter (i.e "Order placed", "Shipped", "Cancelled") |
+| `status` | query | enum: Order placed, Shipped, Delivered, Issue, Cancelled, Returned, Partially returned | No | Status filter (i.e "Order placed", "Shipped", "Cancelled") |
 | `startDate` | query | any | No | Inclusive start of the orderPlacedAt filter (ISO date or datetime) |
 | `endDate` | query | any | No | Inclusive end of the orderPlacedAt filter (ISO date or datetime) |
 | `pageSize` | query | integer | No | Number of orders per page (default 10, max 100) |
