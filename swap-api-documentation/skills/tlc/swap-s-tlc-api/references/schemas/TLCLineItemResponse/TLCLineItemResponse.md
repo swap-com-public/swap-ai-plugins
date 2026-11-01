@@ -14,4 +14,5 @@
 | `import` | any | Yes | The import fee of the item |
 | `taxDuty` | any | Yes | The tax and duty of the item |
 | `externalId` | string | No | The same external ID sent in the request, if provided |
+| `restricted` | boolean | No | The item has been flagged with possible shipping restrictions |
 

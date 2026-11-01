@@ -6,7 +6,7 @@
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `allowedPaymentMethods` | enum: card, applepay, googlepay... | No | The allowed payment methods for this session. |
+| `allowedPaymentMethods` | enum: card, applepay, googlepay, paypal, klarna, klarna_account, klarna_paynow | No | The allowed payment methods for this session. |
 | `chatId` | string | Yes | The chat ID associated with the chat session. |
 | `userEmail` | string | No | The user email. |
 | `shippingAddress` | any | No | The shipping address. Optional if using express checkout. |

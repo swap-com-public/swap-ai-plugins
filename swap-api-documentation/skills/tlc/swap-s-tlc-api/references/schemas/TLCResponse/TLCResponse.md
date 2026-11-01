@@ -19,4 +19,5 @@
 | `lineItems` | TLCLineItemResponse[] | Yes | Line items tax, duty, and import fee breakdown. Shipping is the last item in this array for backwards compatibility |
 | `shipping` | any | Yes | Shipping tax, duty, and import fee breakdown |
 | `metadata` | object | No | The metadata from the request body |
+| `warnings` | string[] | No | Any warnings that have been flagged for the order |
 

@@ -11,7 +11,7 @@
 | `storeId` | string | Yes | The store ID. |
 | `cartId` | string | Yes | The cart ID. |
 | `chatId` | string | Yes | The chat ID. |
-| `status` | enum: draft, payment_ready, payment_processing... | Yes | The status of the checkout session. |
+| `status` | enum: draft, payment_ready, payment_processing, completed, expired, cancelled | Yes | The status of the checkout session. |
 | `expiresAt` | string | Yes | The date and time when the checkout session expires. After this time, the session will be terminated and inventory reservation released. |
 | `lineItems` | LineItemDto[] | Yes | The line items in the checkout session. |
 | `totals` | any | Yes | The totals of the checkout session. |

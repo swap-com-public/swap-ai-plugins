@@ -12,7 +12,7 @@ List orders for a user in a specific store with pagination and optional status f
 |------|------|------|----------|-------------|
 | `limit` | query | number | No | The page size limit of the orders. Used for pagination. Default is 20. |
 | `offset` | query | number | No | The offset of the orders. Used for pagination. Default is 0. |
-| `status` | query | enum: pending, paid, fulfilled... | No | The status of the orders. Used for filtering. Default is all statuses. |
+| `status` | query | enum: pending, paid, fulfilled, partially_fulfilled, delivered, cancelled, refunded, partially_refunded | No | The status of the orders. Used for filtering. Default is all statuses. |
 | `x-store-id` | header | string | Yes | Store identifier. |
 
 ## Responses

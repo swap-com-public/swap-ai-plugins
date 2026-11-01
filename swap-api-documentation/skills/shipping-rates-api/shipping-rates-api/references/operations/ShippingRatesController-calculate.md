@@ -4,6 +4,12 @@
 **Calculate partner shipping rates**
 **Operation ID:** `ShippingRatesController_calculate`
 
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `X-Request-ID` | header | string | No | Optional correlation id for this attempt (1-128 chars, [A-Za-z0-9._:-]). If omitted or invalid, the server generates one and returns it in the X-Request-ID response header. |
+
 ## Request Body
 
 **Required:** Yes
